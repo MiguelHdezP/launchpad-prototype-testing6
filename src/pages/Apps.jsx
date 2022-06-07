@@ -14,7 +14,7 @@ export default function Apps(props) {
   const fakeData = MockAppsData.slice(0, dataNoData);
   const [payLoadData, setPayLoadData] = useState("");
   const [searchApps, setSearchApp] = useState("");
-  const [arrangeApps, setArrangeApps] = useState("");
+  const [arrangeApps, setArrangeApps] = useState("z-citrix-apps");
   const filterData = () => {
     let fakeDataFiltered = fakeData.filter((data) => {
       if (searchApps === "" || searchApps === " ") {
@@ -25,8 +25,6 @@ export default function Apps(props) {
         return data;
       }
     });
-    if (arrangeConfig == 5) setArrangeApps("n-citrix-apps");
-    else if (arrangeConfig == 6) setArrangeApps("z-citrix-apps");
     if (sortConfig == 3)
       return fakeDataFiltered.sort((a, b) => {
         if (a.appName.toLowerCase() < b.appName.toLowerCase()) return -1;

@@ -1,7 +1,6 @@
 import React from "react";
 import "./SectionHeader.scss";
 import Hyperlink from "../hyperlink/Hyperlink";
-import { BsFillFunnelFill } from "react-icons/bs";
 import IconExternalLink from "terra-icon/lib/icon/IconExternalLink";
 
 export default function SectionHeader(props) {
@@ -39,11 +38,12 @@ export default function SectionHeader(props) {
             hyperlinkText={hyperlinkText}
             hrefHyperlink={hrefHyperlink}
             hyperlinkTarget={hyperlinkTarget}
-          />
+          >
+            <IconExternalLink />
+          </Hyperlink>
         ) : (
           ""
         )}
-        {icon1On ? <BsFillFunnelFill /> : ""}
         {icon2On ? <IconExternalLink /> : ""}
       </div>
     </header>

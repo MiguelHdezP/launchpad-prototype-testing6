@@ -316,51 +316,12 @@ export default function Today(props) {
           </ul>
         </div>
       </ContainerGlance>
-      {/*<ContainerGlance
-        glanceTitle="Chats"
-        customClassSectHeader="glances-section-header"
-        customClassIndividualGlance="chats-glance"
-        icon1On={true}
-        icon2On={true}
-      >
-        <div>
-          <ul>
-            {[...Array(5)].map((ele, i) => {
-              const {
-                messageCard = "",
-                messageCard1 = "",
-                messageCard3 = "",
-                messageCard4 = "",
-                messageCardIcon1 = false,
-                messageCardIcon2 = false,
-                messageCardIcon3 = false,
-                messagesCount = 0,
-              } = chatsArr[i];
-              return (
-                <Lists key={i}>
-                  <ChatsCard
-                    messageCard={messageCard}
-                    messageCard1={messageCard1}
-                    messageCard3={messageCard3}
-                    messageCard4={messageCard4}
-                    messageCardIcon1={messageCardIcon1}
-                    messageCardIcon2={messageCardIcon2}
-                    messageCardIcon3={messageCardIcon3}
-                    avatarVal={i}
-                    messagesCount={messagesCount}
-                  />
-                </Lists>
-              );
-            })}
-          </ul>
-        </div>
-      </ContainerGlance>*/}
       <ContainerGlance
         glanceTitle="Messages"
         customClassSectHeader="glances-section-header"
         customClassIndividualGlance="messages-glance"
-        icon1On={false}
-        icon2On={false}
+        icon1On={true}
+        icon2On={true}
         newMessagesCount={countsMsg}
       >
         <div>
@@ -395,9 +356,6 @@ export default function Today(props) {
               );
             })}
           </ul>
-        </div>
-        <div className="today-glance-showMore-bottom">
-          <a href="">Show More</a>
         </div>
       </ContainerGlance>
       <ContainerGlance
